@@ -1,0 +1,9 @@
+syntax: glob
+
+*.dll
+*.exe
+*.suo
+*.user
+bin/*
+obj/*
+_ReSharper*
