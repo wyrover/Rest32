@@ -15,6 +15,12 @@ syntax: glob
 *.ilk
 *.sdf
 *.ipch
+*.idb
+*.log
+*.opensdf
+*.unsuccessfulbuild
+*.ncb
+
 bin/*
 obj/*
 _ReSharper*
