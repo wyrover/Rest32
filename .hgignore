@@ -4,6 +4,17 @@ syntax: glob
 *.exe
 *.suo
 *.user
+*.pdb
+*.sln
+*.cd
+*.tlog
+*.lastbuildstate
+*.obj
+*.pch
+*.intermediate.manifest
+*.ilk
+*.sdf
+*.ipch
 bin/*
 obj/*
 _ReSharper*
