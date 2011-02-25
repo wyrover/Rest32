@@ -16,7 +16,9 @@ public:
     wstring GetMethod() const;
     wstring GetResource() const;
     wstring GetBody() const;
-    void AddParameter(const wstring &name, const wstring &value);
+    wstring GetHeaders() const;
+    wstring GetParameters() const;
+    void AddParameter(const wstring &name, const wstring &value, const wstring &type);
     void AddHeader(const wstring &name, const wstring &value);
     void SetMethod(const wstring &method);
     void SetResource(const wstring &resource);
@@ -26,7 +28,7 @@ private:
     wstring method_;
     wstring resource_;
     wstring body_;
-    vector<HttpParameter> headers_;
+    vector<HttpHeader> headers_;
     vector<HttpParameter> parameters_;
 };
 

@@ -4,7 +4,9 @@
 
 namespace Rest32 {
 
-HttpParameter::HttpParameter(void)
+HttpParameter::HttpParameter(const wstring &name, 
+                             const wstring &value,
+                             const wstring &type)
 {
 }
 

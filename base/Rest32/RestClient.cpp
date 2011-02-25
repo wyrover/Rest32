@@ -1,6 +1,6 @@
 #include "StdAfx.h"
 #include "RestClient.h"
-#include<string>
+#include <string>
 
 namespace Rest32 {
 
@@ -20,7 +20,7 @@ RestResponse RestClient::Execute(const RestRequest &request)
     // Validate the request
     //wstring res = request.GetResource();
     std::wstring converted = std::wstring(request.GetResource());
-
+    wstring headers_ = request.GetHeaders();
     // Return a response
     RestResponse &response = RestResponse();
     return response;

@@ -13,14 +13,18 @@ RestRequest::~RestRequest(void)
 }
 
 void RestRequest::AddParameter(const wstring &name, 
-                               const wstring &value)
+                               const wstring &value,
+                               const wstring &type)
 {
+    const HttpParameter &parameter_ = HttpParameter(name, value, type);
+    parameters_.push_back(parameter_);
 }
 
 void RestRequest::AddHeader(const wstring &name, 
                             const wstring &value)
 {
-
+    const HttpHeader &header_ = HttpHeader(name, value);
+    headers_.push_back(header_);
 }
 
 void RestRequest::SetMethod(const wstring &method)
@@ -41,6 +45,25 @@ wstring RestRequest::GetResource() const
 void RestRequest::SetBody(const wstring &body)
 {
 
+}
+
+std::wstring RestRequest::GetHeaders() const
+{
+    wstring text_;
+
+    while (!headers_.empty())
+    {
+        //HttpHeader header = headers_.back();
+        //text_.append(header.GetHeaderAsString());
+    }
+
+    return text_;
+}
+
+std::wstring RestRequest::GetParameters() const
+{
+    wstring text_;
+    return text_;
 }
 
 }
