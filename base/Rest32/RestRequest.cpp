@@ -51,10 +51,9 @@ std::wstring RestRequest::GetHeaders() const
 {
     wstring text_;
 
-    while (!headers_.empty())
+    for (int i = 0; i < headers_.size(); i++)
     {
-        //HttpHeader header = headers_.back();
-        //text_.append(header.GetHeaderAsString());
+        text_.append(headers_[i].GetHeaderAsString());
     }
 
     return text_;
@@ -63,6 +62,7 @@ std::wstring RestRequest::GetHeaders() const
 std::wstring RestRequest::GetParameters() const
 {
     wstring text_;
+
     return text_;
 }
 
