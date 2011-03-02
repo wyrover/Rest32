@@ -51,7 +51,7 @@ std::wstring RestRequest::GetHeaders() const
 {
     wstring text_;
 
-    for (int i = 0; i < headers_.size(); i++)
+    for (unsigned int i = 0; i < headers_.size(); i++)
     {
         text_.append(headers_[i].GetHeaderAsString());
     }
