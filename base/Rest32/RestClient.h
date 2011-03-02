@@ -14,7 +14,7 @@ namespace Rest32 {
 class RestClient
 {
 public:
-    RestClient(const wstring &url);
+    explicit RestClient(const wstring &url);
     ~RestClient(void);
 
     RestResponse Execute(const RestRequest &request) const;
@@ -23,6 +23,7 @@ public:
 
 private:
     wstring url_;
+    wstring user_agent_;
 
     RestResponse ExecuteHttpRequest(const RestRequest &request) const;
 };

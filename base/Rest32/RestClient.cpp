@@ -6,6 +6,7 @@ namespace Rest32 {
 RestClient::RestClient(const wstring &url) 
 {
     url_ = url;
+    user_agent_ = _T("Rest32 (https://github.com/brianly/Rest32)");
 }
 
 RestClient::~RestClient(void)
@@ -33,16 +34,13 @@ void RestClient::SetAuthenticator(const OAuth1Authenticator &authenticator)
 
 void RestClient::SetUserAgent(const wstring &user_agent)
 {
-
+    user_agent_ = user_agent;
 }
 
 RestResponse RestClient::ExecuteHttpRequest(const RestRequest &request) const
 {
     // Set URL.
     WinHttpClient client(url_ + request.GetResource());
-
-    // Set the user agent
-    client.SetUserAgent(_T("Rest32 (https://github.com/brianly/Rest32)"));
 
     // Send http request, a GET request by default.
     client.SendHttpRequest();
