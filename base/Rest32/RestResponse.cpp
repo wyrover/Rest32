@@ -77,12 +77,12 @@ void RestResponse::SetRequest(const RestRequest &val)
     request_ = val;
 }
 
-size_t RestResponse::GetHttpStatusCode() const
+wstring RestResponse::GetHttpStatusCode() const
 {
     return status_code_;
 }
 
-void RestResponse::SetHttpStatusCode(const size_t &val)
+void RestResponse::SetHttpStatusCode(const wstring &val)
 {
     status_code_ = val;
 }

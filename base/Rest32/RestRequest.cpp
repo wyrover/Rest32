@@ -34,12 +34,12 @@ void RestRequest::SetMethod(const wstring &method)
 
 void RestRequest::SetResource(const wstring &resource)
 {
-
+    resource_ = resource;
 }
 
 wstring RestRequest::GetResource() const
 {
-    return _T("");
+    return resource_;
 }
 
 void RestRequest::SetBody(const wstring &body)

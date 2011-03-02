@@ -26,8 +26,8 @@ public:
     void SetHeaders(const wstring &val);
     RestRequest GetRequest() const;
     void SetRequest(const RestRequest &val);
-    size_t GetHttpStatusCode() const;
-    void SetHttpStatusCode(const size_t &val);
+    wstring GetHttpStatusCode() const;
+    void SetHttpStatusCode(const wstring &val);
     std::wstring GetHttpStatusDescription() const;
     void SetHttpStatusDescription(const wstring &val);
 
@@ -40,7 +40,7 @@ private:
     wstring error_;
     wstring headers_;
     RestRequest request_;
-    size_t status_code_;
+    wstring status_code_;
     wstring status_info_;
 };
 

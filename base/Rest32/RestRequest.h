@@ -28,6 +28,7 @@ private:
     wstring method_;
     wstring resource_;
     wstring body_;
+
     vector<HttpHeader> headers_;
     vector<HttpParameter> parameters_;
 };
